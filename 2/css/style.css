@@ -1,0 +1,33 @@
+*{
+    box-sizing: border-box;
+}
+
+div {
+    border: 3px solid green;
+}
+
+.container {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1400px;
+
+}
+.row {
+    display: flex; 
+    flex-wrap: wrap;
+}
+
+.col {
+    min-height: 100px;
+}
+.col-6 {
+    min-height: 500px;
+}
+.col-8 {
+    min-height: 200px;
+}
+.col-10 {
+    min-height: 402px;
+}
+
+

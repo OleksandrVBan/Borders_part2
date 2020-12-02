@@ -1,0 +1,135 @@
+*{
+    box-sizing: border-box;
+}
+/* Границі для блоків*/
+div {
+    border: 5px solid red;
+}
+/*  
+Щоб розмістити контент по центру викор:  
+margin: 0 auto; 
+ */
+.container {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1200px;
+}
+ /* 
+Вказуємо що це буде зроблено на влексах:  
+display: flex;
+Також потрібно вказати перенос тексту на новву строку (який по 
+замовчуваню у FLEX вимкнутий - flex-wrap: wrap;) 
+ */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+/*
+Властивості flex: (flex-shrink, flex-grow, flex-basis) 
+Відповідно короткий запис: flex: 0(shrink) 1(grow) 100%(basis);
+min-height - висота блока 
+border: 5px solid yellow - границі для нижнього col;
+*/
+.col {
+    border: 5px solid red;
+    flex: 0 1 100%;
+    min-height: 200px;
+}
+/* Три блоки їх розміри*/
+.col-12 {
+    flex-basis: 100%;
+    max-width: 100%;
+    min-width: 100%;
+}
+
+.col-10 {
+    flex-basis: 83.333%;
+    max-width: 83.333%;
+    min-width: 83.333%;
+    min-height: 300px;
+}
+
+.col-2 {
+    flex-basis: 16.668%;
+    max-width: 16.668%;
+    min-width: 16.668%;
+}
+
+.col-25  {
+    flex-basis: 25%;  
+    max-width: 25%; 
+    min-width: 25%; 
+}
+
+/* Кольори */
+.greenyellow {
+    background-color: greenyellow;
+    }
+.burlywood{
+    background-color: burlywood;
+}
+.darkgoldenrod {
+    background-color: darkgoldenrod;
+}
+.purple {
+    border: 5px solid aqua;
+    background-color: purple;
+}
+
+/* 
+Робимо медіа запит!
+Умова виконується коли розширення менше ніж 600px 
+ */
+ @media (max-width: 600px) {
+
+    .col-12 {
+        flex-basis: 100%;
+        max-width: 100%;
+        min-width: 100%;
+        min-height: 100px;
+    }
+
+    .col-10 {
+        flex-basis: 100%;
+        max-width: 100%;
+        min-width: 100%;
+        min-height: 300px;
+    }
+
+    .col-2 {
+        flex-basis: 100%;
+        max-width: 100%;
+        min-width: 100%;
+        min-height: 100px;
+        order: -1;
+    }
+
+    .col-25  {
+        flex-basis: 100%;  
+        max-width: 100%; 
+        min-width: 100%; 
+        min-height: 50px;
+    }
+ }
+
+ @media (max-width: 400px) {
+    .col-12 {
+        flex-basis: 100%;
+        max-width: 100%;
+        min-width: 100%;
+        min-height: 35px;
+        background-color: yellow;
+    }
+    .col-10 {
+        flex-basis: 100%;
+        max-width: 100%;
+        min-width: 100%;
+        min-height: 100px;
+    }
+    .col-25  {
+        flex-basis: 50%;  
+        max-width: 50%; 
+        min-width: 50%; 
+        min-height: 35px;
+    }
+ }
